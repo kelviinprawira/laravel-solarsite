@@ -5,7 +5,7 @@
         </label>
     </div>
     <div class="navbar-center">
-        <a href="{{route('home')}}" class="btn btn-ghost text-xl" wire:navigate>{{config('app.name')}}</a>
+        <a href="{{route('home')}}" class="btn btn-ghost text-xl" wire:navigate>SELAMAT DATANG DI DASHBOARD SOLAR</a>
     </div>
     <div class="navbar-end">
         <div class="font-bold text-sm text-black-500">{{ \Illuminate\Support\Str::upper(auth()->user()->username) }} -
