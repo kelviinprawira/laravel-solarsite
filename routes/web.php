@@ -11,6 +11,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', \App\Livewire\Auth\Profile::class)->name('profile');
     Route::get('/solar', \App\Livewire\Solar\Index::class)->name('solar');
     Route::get('/solar/create', \App\Livewire\Solar\Create::class)->name('solar.create');
+    Route::get('/solar/master/edit', \App\Livewire\Master\SolarActions::class)->name('master.edit');
+    Route::get('/master/solar', \App\Livewire\Master\SolarIndex::class)->name('master.index')->middleware('role:admin');
 
 });
 

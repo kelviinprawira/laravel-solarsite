@@ -3,7 +3,6 @@
 namespace App\Livewire\Solar;
 
 use App\Models\Solar;
-use Livewire\Attributes\Reactive;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -11,11 +10,15 @@ use Livewire\Component;
 class Index extends Component
 {
     public $date;
+    public $listeners = [
+        'reload' => '$refresh'
+    ];
 
     public function mount()
     {
         $this->date = request('date') ?? now()->format('Y-m-d');
     }
+
 
     public function render()
     {
@@ -47,32 +50,32 @@ class Index extends Component
             $solars->inf_unit_umum_real;
 
         // WM ACH
-        $wm_alat_berat_ach = $solars->wm_alat_berat_real / $solars->wm_alat_berat_plan;
-        $wm_dt_infras_ach = $solars->wm_dt_infras_real / $solars->wm_dt_infras_plan;
-        $wm_pompa_genset_ach = $solars->wm_pompa_genset_real / $solars->wm_pompa_genset_plan;
-        $wm_unit_umum_ach = $solars->wm_unit_umum_real / $solars->wm_unit_umum_plan;
+        $wm_alat_berat_ach = ($solars->wm_alat_berat_real ?? 0) / ($solars->wm_alat_berat_plan ?? 0);
+        $wm_dt_infras_ach = ($solars->wm_dt_infras_real ?? 0) / ($solars->wm_dt_infras_plan ?? 0);
+        $wm_pompa_genset_ach = ($solars->wm_pompa_genset_real ?? 0) / ($solars->wm_pompa_genset_plan ?? 0);
+        $wm_unit_umum_ach = ($solars->wm_unit_umum_real ?? 0) / ($solars->wm_unit_umum_plan ?? 0);
         $total_wm_ach = $wm_alat_berat_ach + $wm_dt_infras_ach + $wm_pompa_genset_ach + $wm_unit_umum_ach;
 
         // TRANSPORT ACH
-        $tp_dt_transport_ach = $solars->tp_dt_transport_real / $solars->tp_dt_transport_plan;
-        $tp_dt_infras_ach = $solars->tp_dt_infras_real / $solars->tp_dt_infras_plan;
+        $tp_dt_transport_ach = ($solars->tp_dt_transport_real ?? 0) / ($solars->tp_dt_transport_plan ?? 0);
+        $tp_dt_infras_ach = ($solars->tp_dt_infras_real ?? 0) / ($solars->tp_dt_infras_plan ?? 0);
         $total_tp_ach = $tp_dt_transport_ach + $tp_dt_infras_ach;
 
         // RAWAT TM ACH
-        $rt_alat_rawat_ach = $solars->rt_alat_rawat_real / $solars->rt_alat_rawat_plan;
-        $rt_alat_tankos_ach = $solars->rt_alat_tankos_real / $solars->rt_alat_tankos_plan;
+        $rt_alat_rawat_ach = ($solars->rt_alat_rawat_real ?? 0) / ($solars->rt_alat_rawat_plan ?? 0);
+        $rt_alat_tankos_ach = ($solars->rt_alat_tankos_real ?? 0) / ($solars->rt_alat_tankos_plan ?? 0);
         $total_rt_ach = $rt_alat_rawat_ach + $rt_alat_tankos_ach;
 
         // MILL SUPPORT ACH
-        $ms_genset_ach = $solars->ms_genset_real / $solars->ms_genset_plan;
-        $ms_alat_pabrik_ach = $solars->ms_alat_pabrik_real / $solars->ms_alat_pabrik_plan;
+        $ms_genset_ach = ($solars->ms_genset_real ?? 0) / ($solars->ms_genset_plan ?? 0);
+        $ms_alat_pabrik_ach = ($solars->ms_alat_pabrik_real ?? 0) / ($solars->ms_alat_pabrik_plan ?? 0);
         $total_ms_ach = $ms_genset_ach + $ms_alat_pabrik_ach;
 
         // INFRASTRUCTURE ACH
-        $inf_alat_berat_ach = $solars->inf_alat_berat_real / $solars->inf_alat_berat_plan;
-        $inf_dt_infras_ach = $solars->inf_dt_infras_real / $solars->inf_dt_infras_plan;
-        $inf_pompa_genset_ach = $solars->inf_pompa_genset_real / $solars->inf_pompa_genset_plan;
-        $inf_unit_umum_ach = $solars->inf_unit_umum_real / $solars->inf_unit_umum_plan;
+        $inf_alat_berat_ach = ($solars->inf_alat_berat_real ?? 0) / ($solars->inf_alat_berat_plan ?? 0);
+        $inf_dt_infras_ach = ($solars->inf_dt_infras_real ?? 0) / ($solars->inf_dt_infras_plan ?? 0);
+        $inf_pompa_genset_ach = ($solars->inf_pompa_genset_real ?? 0) / ($solars->inf_pompa_genset_plan ?? 0);
+        $inf_unit_umum_ach = ($solars->inf_unit_umum_real ?? 0) / ($solars->inf_unit_umum_plan ?? 0);
         $total_inf_ach = $inf_alat_berat_ach + $inf_dt_infras_ach + $inf_pompa_genset_ach + $inf_unit_umum_ach;
 
 

@@ -10,6 +10,7 @@ class Solar extends Model
 {
     use HasFactory, SoftDeletes;
 
+
     protected $fillable = [
         'wm_alat_berat_plan',
         'wm_alat_berat_real',
@@ -39,6 +40,7 @@ class Solar extends Model
         'inf_pompa_genset_real',
         'inf_unit_umum_plan',
         'inf_unit_umum_real',
+        'created_at',
     ];
 
 

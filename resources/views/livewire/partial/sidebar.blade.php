@@ -15,6 +15,19 @@
             </li>
         </ul>
     </li>
+    @role('admin')
+    <li>
+        <h2 class="menu-title">Data Master</h2>
+        <ul>
+            <li>
+                <a href="{{route('master.index')}}" @class(['active' => Route::is('solar.index')]) wire:navigate>
+                    <x-tabler-gas-station class="size-5"/>
+                    <span>Data Master Solar</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    @endrole
     <li>
         <h2 class="menu-title">Account</h2>
         <ul>

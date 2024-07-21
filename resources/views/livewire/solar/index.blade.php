@@ -2,14 +2,10 @@
     <div class="flex flex-col justify-between md:flex-row">
         <form action="{{route('solar')}}" method="get">
             <input type="date" class="text-white bg-green-500 input input-bordered" name="date" value="{{$date}}">
-            <button type="submit" class="btn btn-primary">Cari</button>
+            <button type="submit" class="btn btn-primary">
+                <span>Cari</span>
+            </button>
         </form>
-        @role('admin')
-        <button href="#" class="btn btn-primary" wire:click="$dispatch('createSolar')">
-            <x-tabler-plus class="size5"/>
-            <span>Tambah Data</span>
-        </button>
-        @endrole
     </div>
     <div class="grid grid-cols-2">
         <div class="w-full table-wrapper h-fit">
@@ -76,7 +72,7 @@
 
                 </tr>
                 <tr class="text-white bg-green-500">
-                    <td>TRANSPORT PANEN</td>
+                    <td>TRANSPORT</td>
                     <td class="text-center">{{$total_tp_plan ?? 0}}</td>
                     <td class="text-center">{{$total_tp_real ?? 0}}</td>
                     <td class="text-center">{{\Illuminate\Support\Number::format($total_tp_ach ?? 0, 2)}} %</td>
@@ -192,7 +188,6 @@
             <livewire:solar.solar-chart :date="$date"/>
         </div>
     </div>
-    <livewire:solar.create/>
 </div>
 
 
