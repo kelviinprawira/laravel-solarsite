@@ -3,7 +3,7 @@
         <form action="{{route('solar')}}" method="get">
             <input type="date" class="text-white bg-green-500 input input-bordered" name="date" value="{{$date}}">
             <button type="submit" class="btn btn-primary">
-                <span>Cari</span>
+                <span>Cari Data</span>
             </button>
         </form>
     </div>
