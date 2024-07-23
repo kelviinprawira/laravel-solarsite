@@ -13,7 +13,6 @@ class SolarIndex extends Component
     use WithPagination;
 
     public $no = 1;
-    
 
     public function render()
     {

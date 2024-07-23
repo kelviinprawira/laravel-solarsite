@@ -11,15 +11,15 @@
         var options1 = {
                 series: [
                     {
-                        name: 'PLAN (Liter)',
+                        name: 'PLAN',
                         data: @json($chart_wm_plan),
                     },
                     {
-                        name: 'REAL (Liter)',
+                        name: 'REAL',
                         data: @json($chart_wm_real),
                     },
                     {
-                        name: 'ACH (Liter)',
+                        name: 'ACH',
                         data: @json($chart_wm_ach),
                     },
                 ],
@@ -52,7 +52,7 @@
                 }
                 ,
                 xaxis: {
-                    categories: ['QUALITY'],
+                    categories: ['QUALITY (Liter)'],
                 },
                 fill: {
                     opacity: 1

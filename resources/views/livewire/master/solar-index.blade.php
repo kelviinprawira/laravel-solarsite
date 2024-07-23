@@ -1,20 +1,18 @@
 <div class="page-wrapper">
     <div class="flex flex-col justify-end gap-2 md:flex-row">
-
         <div class="flex flex-col justify-between gap-4 md:flex-row">
             <button class="btn btn-primary" wire:click="$dispatch('createSolar')">
                 <x-tabler-plus class="size-5"/>
                 <span>Tambah Data</span>
             </button>
         </div>
-
     </div>
     <div class="table-wrapper">
         <table class="table">
             <thead class="text-center">
             <th>No</th>
             <th>Tanggal Input</th>
-            <th>Actions</th>
+            <th class="justify-end">Actions</th>
             </thead>
             <tbody class="text-center">
             @foreach($solar as $item)
@@ -38,6 +36,9 @@
             @endforeach
             </tbody>
         </table>
+        <div class="m-3">
+            {{ $solar->links('pagination::tailwind') }}
+        </div>
     </div>
     <livewire:master.solar-actions/>
     <livewire:solar.create/>

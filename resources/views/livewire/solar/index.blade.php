@@ -142,7 +142,7 @@
                 <tr class="text-white bg-green-500">
                     <td>TEKNIK</td>
                     <td class="text-center">{{$total_inf_plan ?? 0}}</td>
-                    <td class="text-center">{{$total_inf_plan ?? 0}}</td>
+                    <td class="text-center">{{$total_inf_real ?? 0}}</td>
                     <td class="text-center">{{\Illuminate\Support\Number::format($total_inf_ach ?? 0, 2)}} %</td>
 
                 </tr>
@@ -150,7 +150,6 @@
                     <td>ALAT BERAT</td>
                     <td class="text-center">{{$solar->inf_alat_berat_plan ?? 0}}</td>
                     <td class="text-center">{{$solar->inf_alat_berat_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($inf_alat_berat_ach ?? 0, 2)}}</td>
 
                 </tr>
