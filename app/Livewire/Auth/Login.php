@@ -19,9 +19,8 @@ class Login extends Component
     {
         $valid = $this->validate();
         if (Auth::attempt($valid)) {
-            $this->redirect(route('home'), true);
+            $this->redirect(route('solar'), true);
         }
-
     }
 
     public function render()

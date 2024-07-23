@@ -1,11 +1,13 @@
 <div class="container p-2 mx-auto space-y-6">
-    <div class="flex flex-col justify-between md:flex-row">
+    <div class="flex flex-col md:flex-row gap-5">
         <form action="{{route('solar')}}" method="get">
             <input type="date" class="text-white bg-green-500 input input-bordered" name="date" value="{{$date}}">
             <button type="submit" class="btn btn-primary">
                 <span>Cari Data</span>
             </button>
         </form>
+        <a href="{{ route('solar') }}" wire:navigate class="btn btn-success text-white">DASHBOARD</a>
+        <a href="{{ route('master.index') }}" wire:navigate class="btn btn-info text-white">DATA MASTER</a>
     </div>
     <div class="grid grid-cols-2">
         <div class="w-full table-wrapper h-fit">
@@ -37,7 +39,7 @@
                     <td>WATER MANAGEMENT SYSTEM</td>
                     <td class="text-center">{{$total_wm_plan ?? 0}}</td>
                     <td class="text-center">{{$total_wm_real ?? 0}}</td>
-                    <td class="text-center">{{\Illuminate\Support\Number::format($total_wm_ach ?? 0 , 2)}} %</td>
+                    <td class="text-center">{{\Illuminate\Support\Number::format($total_wm_ach ?? 0, 2)}} %</td>
 
                 </tr>
                 <tr>
@@ -51,7 +53,6 @@
                     <td>DT INFRAS</td>
                     <td class="text-center">{{$solar->wm_dt_infras_plan ?? 0}}</td>
                     <td class="text-center">{{$solar->wm_dt_infras_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($wm_dt_infras_ach ?? 0, 2)}}</td>
 
                 </tr>
@@ -82,7 +83,6 @@
                     <td>DT TRANSPORT</td>
                     <td class="text-center">{{$solar->tp_dt_transport_plan ?? 0}}</td>
                     <td class="text-center">{{$solar->tp_dt_transport_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($tp_dt_transport_ach ?? 0, 2)}}</td>
 
                 </tr>
@@ -98,16 +98,13 @@
                     <td>RAWAT</td>
                     <td class="text-center">{{$total_rt_plan ?? 0}}</td>
                     <td class="text-center">{{$total_rt_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($total_rt_ach ?? 0, 2)}} %</td>
 
                 </tr>
                 <tr>
                     <td>AlAT RAWAT</td>
-
                     <td class="text-center">{{$solar->rt_alat_rawat_plan ?? 0}}</td>
                     <td class="text-center">{{$solar->rt_alat_rawat_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($rt_alat_rawat_ach ?? 0, 2)}}</td>
 
                 </tr>
@@ -123,7 +120,6 @@
                     <td>PABRIK</td>
                     <td class="text-center">{{$total_ms_plan ?? 0}}</td>
                     <td class="text-center">{{$total_ms_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($total_ms_ach ?? 0, 2)}} %</td>
 
                 </tr>
@@ -147,7 +143,6 @@
                     <td>TEKNIK</td>
                     <td class="text-center">{{$total_inf_plan ?? 0}}</td>
                     <td class="text-center">{{$total_inf_plan ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($total_inf_ach ?? 0, 2)}} %</td>
 
                 </tr>
@@ -163,23 +158,19 @@
                     <td>DT INFRAS</td>
                     <td class="text-center">{{$solar->inf_dt_infras_plan ?? 0}}</td>
                     <td class="text-center">{{$solar->inf_dt_infras_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($inf_dt_infras_ach ?? 0, 2)}}</td>
-
                 </tr>
                 <tr>
                     <td>POMPA & GENSET</td>
                     <td class="text-center">{{$solar->inf_pompa_genset_plan ?? 0}}</td>
                     <td class="text-center">{{$solar->inf_pompa_genset_real ?? 0}}</td>
-
                     <td class="text-center">{{\Illuminate\Support\Number::format($inf_pompa_genset_ach ?? 0, 2)}}</td>
-
                 </tr>
                 <tr>
                     <td>UNIT UMUM</td>
                     <td class="text-center">{{$solar->inf_unit_umum_plan ?? 0}}</td>
                     <td class="text-center">{{$solar->inf_unit_umum_real ?? 0}}</td>
-                    <td class="text-center">{{\Illuminate\Support\Number::format($inf_unit_umum_ach ?? 0, 2)}}</td>
+                    <td class="text-center">{{\Illuminate\Support\Number::format($inf_unit_umum_ach  ?? 0, 2)}}</td>
                 </tr>
                 </tbody>
             </table>

@@ -25,7 +25,7 @@
 @guest()
     <div class="flex flex-col items-center justify-center h-screen bg-no-repeat bg-center bg-cover"
          style="background-image: url({{asset('images/login_image.png')}})">
-        <h1 class="py-3 text-4xl font-bold text-white">{{config ('app.name')}}</h1>
+        <h1 class="py-3 text-5xl font-extrabold text-white">DASHBOARD SOLAR SITE</h1>
         {{ $slot }}
     </div>
 @endguest

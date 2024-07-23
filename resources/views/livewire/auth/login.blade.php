@@ -13,7 +13,7 @@
                 <label @class(['input input-bordered flex items-center gap-2', 'input-error' => $errors->first
                 ('password')])>
                     <x-tabler-key class="size-5"/>
-                    <input type="password" class="grow" wire:model="password" placeholder="password"/>
+                    <input type="password" class="grow" wire:model="password" placeholder="Password"/>
                 </label>
             </div>
             <div class="card-actions justify-between">
@@ -22,6 +22,7 @@
                     <span>Login</span>
                 </button>
             </div>
+            <div>Created By: Rusman - Astra AgroLestari - SAL1</div>
         </form>
     </div>
 </div>

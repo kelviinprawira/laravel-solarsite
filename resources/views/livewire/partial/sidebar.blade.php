@@ -1,6 +1,6 @@
 <ul class="menu p-4 w-80 min-h-full bg-base-100 text-base-content space-y-4 border-r-2 border-base-300">
     <li>
-        <a href="{{route('home')}}" class="flex items-center justify-center">
+        <a href="{{route('solar')}}" class="flex items-center justify-center">
             <img src="{{asset('images/logo.png')}}" alt="logo">
         </a>
     </li>

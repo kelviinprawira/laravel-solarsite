@@ -8,61 +8,61 @@ use Livewire\Form;
 
 class SolarForm extends Form
 {
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_alat_berat_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_alat_berat_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_dt_infras_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_dt_infras_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_pompa_genset_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_pompa_genset_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_unit_umum_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $wm_unit_umum_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $tp_dt_transport_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $tp_dt_transport_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $tp_dt_infras_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $tp_dt_infras_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $rt_alat_rawat_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $rt_alat_rawat_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $rt_alat_tankos_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $rt_alat_tankos_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $ms_genset_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $ms_genset_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $ms_alat_pabrik_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $ms_alat_pabrik_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_alat_berat_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_alat_berat_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_dt_infras_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_dt_infras_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_pompa_genset_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_pompa_genset_real = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_unit_umum_plan = '0.';
-    #[Validate('required|min:1|max:5')]
+    #[Validate('required|min:1|max:5|nullable')]
     public $inf_unit_umum_real = '0.';
 
     #[Validate('required')]
