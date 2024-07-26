@@ -29,6 +29,12 @@
         {{ $slot }}
     </div>
 @endguest
+<footer class="footer footer-center bg-white flex justify-center text-base-content p-4">
+    <aside>
+        <p>Copyright © {{\Carbon\Carbon::now()->format('Y')}} - All right reserved by Rusman - Astra Agrolestari -
+            SAL1</p>
+    </aside>
+</footer>
 @livewireScripts
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{asset('chart/dist/apexcharts.min.js')}}"></script>

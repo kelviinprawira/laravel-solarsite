@@ -19,7 +19,7 @@
                         data: @json($chart_wm_real),
                     },
                     {
-                        name: 'ACH',
+                        name: 'ACH (%)',
                         data: @json($chart_wm_ach),
                     },
                 ],
@@ -69,13 +69,6 @@
                     text: 'WATER MANAGEMENT SYSTEM',
                 }
                 ,
-                tooltip: {
-                    y: {
-                        formatter: function (val) {
-                            return val + " Liter"
-                        }
-                    }
-                }
             }
         ;
         var chart = new ApexCharts(document.querySelector("#wm"), options1);
@@ -90,11 +83,11 @@
                     data: @json($chart_tp_plan),
                 },
                 {
-                    name: 'REAL (Liter)',
+                    name: 'REAL',
                     data: @json($chart_tp_real),
                 },
                 {
-                    name: 'ACH (Liter)',
+                    name: 'ACH (%)',
                     data: @json($chart_tp_ach),
                 },
             ],
@@ -121,7 +114,7 @@
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['QUALITY'],
+                categories: ['QUALITY (Liter)'],
             },
             yaxis: {
                 labels: {
@@ -133,13 +126,7 @@
             title: {
                 text: 'TRANSPORT'
             },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val + " Liter"
-                    }
-                }
-            }
+
         };
         var chart = new ApexCharts(document.querySelector("#tp"), options2);
         chart.render();
@@ -148,15 +135,15 @@
         var options3 = {
             series: [
                 {
-                    name: 'PLAN (Liter)',
+                    name: 'PLAN',
                     data: @json($chart_rt_plan),
                 },
                 {
-                    name: 'REAL (Liter)',
+                    name: 'REAL',
                     data: @json($chart_rt_real),
                 },
                 {
-                    name: 'ACH (Liter)',
+                    name: 'ACH (%)',
                     data: @json($chart_rt_ach),
                 },
             ],
@@ -183,7 +170,7 @@
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['QUALITY',],
+                categories: ['QUALITY (Liter)'],
 
             },
             yaxis: {
@@ -196,13 +183,7 @@
             title: {
                 text: 'RAWAT'
             },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val + " Liter"
-                    }
-                }
-            }
+
         };
         var chart = new ApexCharts(document.querySelector("#rt"), options3);
         chart.render();
@@ -211,15 +192,15 @@
         var options4 = {
             series: [
                 {
-                    name: 'PLAN (Liter)',
+                    name: 'PLAN',
                     data: @json($chart_ms_plan),
                 },
                 {
-                    name: 'REAL (Liter)',
+                    name: 'REAL',
                     data: @json($chart_ms_real),
                 },
                 {
-                    name: 'ACH (Liter)',
+                    name: 'ACH (%)',
                     data: @json($chart_ms_ach),
                 },
             ],
@@ -258,13 +239,7 @@
             title: {
                 text: 'PABRIK'
             },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val + " Liter"
-                    }
-                }
-            }
+
         };
         var chart = new ApexCharts(document.querySelector("#ms"), options4);
         chart.render();
@@ -273,15 +248,15 @@
         var options5 = {
             series: [
                 {
-                    name: 'PLAN (Liter)',
+                    name: 'PLAN',
                     data: @json($chart_inf_plan),
                 },
                 {
-                    name: 'REAL (Liter)',
+                    name: 'REAL',
                     data: @json($chart_inf_real),
                 },
                 {
-                    name: 'ACH (Liter)',
+                    name: 'ACH (%)',
                     data: @json($chart_inf_ach),
                 },
             ],
@@ -308,7 +283,7 @@
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['QUALITY'],
+                categories: ['QUALITY (Liter)'],
             },
             yaxis: {
                 labels: {
@@ -320,13 +295,6 @@
             title: {
                 text: 'TEKNIK'
             },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val + " Liter"
-                    }
-                }
-            }
         };
         var chart = new ApexCharts(document.querySelector("#inf"), options5);
         chart.render();

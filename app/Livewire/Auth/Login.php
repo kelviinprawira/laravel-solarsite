@@ -7,6 +7,7 @@ use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
+#[Title('Login - SOLAR SITE')]
 class Login extends Component
 {
     #[Validate('required|string|min:3')]
@@ -14,7 +15,6 @@ class Login extends Component
     #[Validate('required|min:5')]
     public $password = '';
 
-    #[Title('Login - Warehouse')]
     public function login()
     {
         $valid = $this->validate();
